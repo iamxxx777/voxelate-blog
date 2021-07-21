@@ -1,5 +1,5 @@
 import * as actionTypes from "../constants/authorsconstants";
-import axios from "axios";
+import axios from "../../axios";
 
 export const getAuthor = (username) => async (dispatch, getState) => {
     try {
