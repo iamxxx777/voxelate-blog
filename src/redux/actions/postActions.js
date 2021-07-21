@@ -1,5 +1,5 @@
 import * as actionTypes from "../constants/blogpostconstants";
-import axios from "../../axios";
+import axios from "axios";
 
 export const getPosts = () => async (dispatch) => {
     try {
