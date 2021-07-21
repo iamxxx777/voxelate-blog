@@ -18,7 +18,7 @@ const Postspage = () => {
     const { posts, loading, error } = useSelector((state) => state.posts);
 
     // Pagination
-    const [articlesPerPage, setArticlesPerPage] = useState(8);
+    const articlesPerPage = 8;
     const [currentPage, setCurrentPage] = useState(1);
 
     let postsLength = posts.length;

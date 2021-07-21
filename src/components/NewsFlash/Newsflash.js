@@ -1,6 +1,6 @@
 import './Newsflash.css';
 import { useSelector } from 'react-redux';
-import { useEffect, useState } from 'react';
+import { useEffect, useState, useRef } from 'react';
 import { Link } from "react-router-dom";
 
 const Newsflash = () => {
@@ -9,7 +9,9 @@ const Newsflash = () => {
 
     const [text, setText] = useState("");
 
-    var index = 0, first, title;
+    let indexEl = useRef(0)
+
+    var first, title;
     if (posts.length > 1) {
         first = posts[0];
         title = first.title;
@@ -18,11 +20,11 @@ const Newsflash = () => {
     useEffect(() => {
         const writeText = () => {
             if(title !== undefined) {
-                setText(title.substring(0, index));
-                index++;
+                setText(title.substring(0, indexEl.current));
+                indexEl.current++;
     
-                if(index > title.length - 1) {
-                    index = 0;
+                if(indexEl.current > title.length - 1) {
+                    indexEl.current = 0;
                 }
             }
         }
