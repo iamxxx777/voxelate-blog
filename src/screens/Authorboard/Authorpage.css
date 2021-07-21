@@ -1,0 +1,29 @@
+.authorpage {
+    width: 100%;
+}
+
+.author-container {
+    width: calc(100% - 240px);
+    position: relative;
+    top: 0;
+    left: 240px;
+}
+
+@media (max-width: 900px) {
+    .author-container {
+        width: calc(100% - 180px);
+        left: 180px;
+    }
+}
+
+@media (max-width: 900px) {
+    .authorpage {
+        display: flex;
+        flex-direction: column;
+    }
+    
+    .author-container {
+        width: 100%;
+        left: 0;
+    }
+}

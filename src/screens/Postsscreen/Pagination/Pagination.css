@@ -1,0 +1,41 @@
+.pagination {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+.pagination-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.pagination-container button {
+    padding: 10px;
+    margin: 5px 7px;
+    border-radius: 3px;
+    border: solid 1px #ccc;
+    outline: none;
+    font-family: inherit;
+    font-size: 15px;
+    font-weight: 400;
+    font-family: inherit;
+    color: #0d1027;
+    background-color: transparent;
+    cursor: pointer;
+    transition: 0.3s linear;
+}
+
+.pagination-container button:hover {
+    background-color: rgb(28, 35, 78);
+    border: none;
+    color: #fff;
+}
+
+.active {
+    background-color: rgb(28, 35, 78);
+    color: #fff;
+}

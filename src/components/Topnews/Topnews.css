@@ -1,0 +1,167 @@
+.trending {
+    width: 100%;
+    height: 90vh;
+    padding: 15px 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.trending-container {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.top-lifestyle {
+    position: relative;
+    width: 49%;
+    height: 100%;
+    border-radius: 0;
+    overflow: hidden;
+}
+
+.trend-img {
+    width: 100%;
+    height: 100%;
+}
+
+.top-lifestyle .trend-img img {
+    height: 100%;
+    object-fit: fill;
+}
+
+.trend-img img {
+    max-width: 100%;
+    height: auto;
+}
+
+.top-lifestyle::before {
+    content: "";
+    position: absolute;
+    height: 50%;
+    width: 100%;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-image: -webkit-gradient(linear, left top, left bottom, from(transparent), to(black));
+    background-image: linear-gradient(180deg, transparent, black);
+}
+
+.trend-title {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    padding: 10px 10px 20px 20px;
+    color: #fff;
+}
+
+
+.trend-title p {
+    font-size: 14px;
+    font-weight: 500;
+    font-family: 'poppins', sans-serif;
+    margin-bottom: 7px;
+}
+
+.top-lifestyle .trend-title h3 {
+    font-size: 20px;
+    font-weight: 600;
+}
+
+.trend-title h3 {
+    font-size: 19px;
+    font-weight: 600;
+}
+
+.split {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    width: 49%;
+    height: 100%;
+}
+
+.top-tech::before,
+.top-crypto::before {
+    content: "";
+    position: absolute;
+    height: 50%;
+    width: 100%;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-image: -webkit-gradient(linear, left top, left bottom, from(transparent), to(black));
+    background-image: linear-gradient(180deg, transparent, black);
+}
+
+.top-crypto {
+    height: 100%;
+    position: relative;
+    border-radius: 0;
+    overflow: hidden;
+}
+
+.top-tech {
+    margin-bottom: 15px;
+    position: relative;
+    height: 100%;
+    border-radius: 0;
+    overflow: hidden;
+}
+
+@media (max-width: 1150px) {
+    .trending {
+        padding: 15px;
+    }
+}
+
+@media (max-width: 768px) {
+    .trending-container {
+        flex-direction: column;
+    }
+    .trending {
+        height: auto;
+    }
+    .trending-container {
+        flex-direction: column;
+    }
+    .top-lifestyle, .split {
+        width: 100%;
+    }
+    .top-lifestyle .trend-img img {
+        height: auto;
+        object-fit: cover;
+    }
+    
+    .top-lifestyle {
+        margin-bottom: 20px;
+    }
+
+    .top-crypto, .top-tech {
+        margin-bottom: 20px;
+    }
+    
+}
+
+@media (max-width: 480px) {
+    .top-lifestyle .trend-title h3, 
+    .trend-title h3 {
+        font-size: 18px;
+        font-weight: 400;
+    }
+}
+
+@media (max-width: 420px) {
+    .trend-title {
+        padding: 10px;
+    }
+    .top-lifestyle .trend-title h3, 
+    .trend-title h3 {
+        font-size: 17px;
+        font-weight: 400;
+        line-height: 1.3;
+    }
+}

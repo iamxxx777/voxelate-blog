@@ -1,0 +1,71 @@
+.recent-post {
+    margin-top: 40px;
+}
+
+.recent-post h3 {
+    font-size: 16px;
+    font-weight: 400;
+    color: #eee;
+}
+
+.recent-author {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    margin-top: 7px;
+}
+
+.recent-img {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.recent-img img {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.recent-img p {
+    margin-left: 10px;
+    font-size: 14px;
+    font-weight: 400;
+}
+
+.recent-author h4 {
+    font-size: 14px;
+    font-weight: 400;
+    text-transform: capitalize;
+    margin-left: 10px;
+}
+
+@media (max-width: 601px) {
+    .recent-img img {
+        width: 30px;
+        height: 30px;
+        border-radius: 50%;
+        object-fit: cover;
+    }
+}
+
+@media (max-width: 531px) {
+    .recent-post {
+        margin-top: 0;
+        margin-bottom: 25px;
+    }
+    .recent-post h3 {
+        font-size: 15px;
+        font-weight: 300;
+    }
+    .recent-img p {
+        font-size: 14px;
+        font-weight: 400;
+    }
+    .recent-author h4 {
+        font-size: 14px;
+        font-weight: 400;
+    }
+}
+

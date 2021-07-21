@@ -1,0 +1,47 @@
+.sidetop {
+    width: 100%;
+    padding: 15px;
+    background-color: #04091e;
+    display: none;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.top-image {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.top-image img {
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.top-button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.top-button button {
+    border: none;
+    outline: none;
+    cursor: pointer;
+    color: #fff;
+    background-color: transparent;
+    font-size: 16px;
+    transition: 0.3s linear;
+}
+
+.top-button button:hover {
+    color: #f30963;
+}
+
+@media (max-width: 800px) {
+    .sidetop {
+        display: flex;
+    }
+}

@@ -1,0 +1,64 @@
+.container {
+  max-width: 1150px;
+  width: 100%;
+  margin: 0 auto;
+}
+
+.card {
+  padding: 15px;
+  background-color: #fff;
+  border-radius: 3px;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.3);
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+
+.category-btn {
+  padding: 5px 15px;
+  border-radius: 3px;
+  width: fit-content;
+  border: none;
+  outline: none;
+  display: inline-block;
+  cursor: pointer;
+  text-transform: capitalize;
+  font-family: inherit;
+  font-size: 15px;
+  color: #fff;
+  margin-bottom: 15px;
+  transition: 0.4s linear;
+}
+
+.football {
+  background-color: goldenrod;
+}
+
+.Technology,
+.technology {
+  background-color: #e21a32;
+}
+
+.Lifestyle,
+.lifestyle {
+  background-color: dodgerblue;
+}
+
+.Cryptocurrency {
+  background-color: forestgreen;
+}
+
+.music {
+  background-color: #390fc2;
+}
+
+
+@media (max-width: 420px) {
+  .category-btn {
+    padding: 5px 7px;
+    font-size: 14px;
+  }
+}

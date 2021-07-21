@@ -1,0 +1,111 @@
+.log_in {
+    width: 100%;
+    min-height: 70vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+}
+
+.login-container {
+    width: 450px;
+    max-width: 100%;
+    padding: 50px 30px !important;
+}
+
+.login-container h2 {
+    font-size: 28px;
+    font-weight: 600;
+    margin-bottom: 20px;
+}
+
+.login-container form {
+    display: flex;
+    flex-direction: column;
+}
+
+.login-container form .form-group {
+    display: flex;
+    flex-direction: column;
+    margin-top: 15px;
+}
+
+.login-container form .form-group small {
+    color: #ff0404;
+    font-weight: 400;
+}
+
+.login-container form .form-group label {
+    font-size: 14px;
+    font-weight: 600;
+    text-transform: uppercase;
+    margin-bottom: 7px;
+}
+
+.login-container form .form-group input {
+    padding: 9px 12px;
+    width: 100%;
+    border-radius: 3px;
+    border: solid 1px rgba(0,0,0,0.4);
+    outline: none;
+    font-weight: inherit;
+    font-size: 15px;
+    color: #222121;
+    background-color: #fff;
+}
+
+.login-container form .form-group .error {
+    border: solid 2px red;
+}
+
+.login-container form .log-button {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    align-items: center;
+    margin-top: 20px;
+}
+
+.login-container form .log-button button {
+    border: none;
+    padding: 9px 20px;
+    outline: none;
+    font-family: inherit;
+    font-weight: normal;
+    font-size: 16px;
+    color: #fff;
+    display: inline-block;
+    cursor: pointer;
+    border-radius: 3px;
+    transition: 0.4s ease;
+    background-color: #1c234e;
+}
+
+.login-container form .log-button button:hover {
+    opacity: 0.7;
+}
+
+.login-container form .log-button h4 {
+    font-size: 15px;
+    font-weight: 600;
+}
+
+.login-container form .log-button h4 a {
+    color: #f30963;
+    text-decoration: underline;
+}
+
+@media (max-width: 400px) {
+    .login-container {
+        margin-top: 30px;
+    }
+    .login-container h2 {
+        margin-bottom: 5px;
+    }
+    .login-container form .log-button {
+        flex-direction: column;
+    }
+    .login-container form .log-button h4 {
+        margin-top: 15px;
+    }
+}

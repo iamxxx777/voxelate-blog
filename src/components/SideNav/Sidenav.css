@@ -1,0 +1,78 @@
+.sidenav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 270px;
+    transform: translateX(-270px);
+    transition: 0.5s linear;
+    height: 100%;
+    z-index: 100;
+    background-color: rgba(0,0,0,0.8);
+    padding: 10px;
+    padding-top: 30px;
+}
+
+.sidenav-container {
+    display: flex;
+    flex-direction: column;
+}
+
+.sidenav-container a,
+.sidenav-container button {
+    padding: 10px 0;
+    color: #fff;
+    font-size: 15px;
+    font-weight: 400;
+    text-transform: uppercase;
+    transition: 0.3s linear;
+}
+
+.sidenav-container button {
+    border: none;
+    outline: none;
+    background-color: transparent;
+    cursor: pointer;
+    font-family: inherit;
+}
+
+.sidenav-container a:hover,
+.sidenav-container button:hover {
+    color: #f30963;
+}
+
+#side-drop-btn {
+    display: flex;
+    justify-content: space-between;
+}
+
+#side-drop-btn i {
+    font-size: 15px;
+}
+
+.side-drop {
+    display: none;
+    flex-direction: column;
+    background-color: #fff;
+    width: 100%;
+}
+
+.side-drop a {
+    color: #111;
+    font-weight: 600;
+    font-size: 14px;
+    padding: 10px 0;
+    padding-left: 10px;
+}
+
+.side-drop a:hover {
+    background-color: #ddd;
+    color: #111;
+}
+
+.show {
+    display: flex;
+}
+
+.translate {
+    transform: translateX(0);
+}

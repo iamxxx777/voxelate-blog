@@ -1,0 +1,139 @@
+.sidebar {
+    width: 240px;
+    height: 100%;
+    padding: 20px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 10;
+    background-color: #111;
+    color: #fff;
+    transition: 0.4s linear;
+}
+
+.sidebar-container {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+}
+
+.author-info {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 30px;
+}
+
+.author-img {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    overflow: hidden;
+    margin-bottom: 15px;
+}
+
+.author-img img {
+    width: 100%;
+    object-fit: contain;
+}
+
+.author-info h3 {
+    padding: 10px 5px;
+    font-weight: 400;
+    font-size: 16px;
+}
+
+.profile-link {
+    padding: 10px 5px;
+}
+
+.profile-link:hover {
+    color: #f30963;
+}
+
+.author-info button {
+    margin-top: 10px;
+    padding: 8px 11px;
+}
+
+.side-links {
+    display: flex;
+    flex-direction: column;
+}
+
+.side-links .link {
+    padding: 10px 5px;
+    margin-top: 6px;
+    cursor: pointer;
+    border: none;
+    outline: none;
+    width: 100%;
+    text-align: left;
+    text-decoration: none;
+    font-family: inherit;
+    font-size: inherit;
+    font-weight: normal;
+    transition: 0.4s linear;
+}
+
+.side-links .link:hover {
+    color: #f30963;
+}
+
+.btn {
+    padding: 9px 12px;
+    border-radius: 3px;
+    background-color: red;
+    color: #fff;
+    font-family: inherit;
+    border: none;
+    outline: none;
+    font-size: 15px;
+    cursor: pointer;
+}
+
+.side-links .logout,
+.author-info .logout {
+    border: solid 2px #f30963;
+    background-color: transparent;
+    color: #f30963;
+    text-align: center;
+    transition: 0.4s linear;
+}
+
+.side-links .logout:hover,
+.author-info .logout:hover {
+    background-color: #f30963;
+    color: #fff;
+}
+
+@media (max-width: 900px) {
+    .sidebar {
+        width: 180px;
+    }
+    .author-img {
+        width: 110px;
+        height: 110px;
+        border-radius: 50%;
+        overflow: hidden;
+        margin-bottom: 15px;
+    }
+}
+
+@media (max-width: 800px) {
+    .sidebar {
+        width: 240px;
+        transform: translateX(-240px);
+        z-index: 9;
+    }
+    .author-img {
+        width: 150px;
+        height: 150px;
+        border-radius: 50%;
+        overflow: hidden;
+        margin-bottom: 15px;
+    }
+    .side-translate {
+        transform: translateX(0);
+    }
+}

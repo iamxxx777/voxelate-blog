@@ -1,0 +1,48 @@
+.main-header {
+    width: 100%;
+    padding: 30px 10px;
+    background-color: #fff;
+}
+
+/* logomaker.thehoth.com/?project=46776079 */
+
+.main {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.main img {
+    width: 60px;
+    height: 60px;
+    object-fit: contain;
+    background-color: transparent;
+}
+
+.main h1 {
+    font-weight: 700;
+    text-transform: capitalize;
+    margin-left: 20px;
+    font-family: 'poppins', sans-serif;
+}
+
+
+
+@media (max-width: 601px) {
+    .main-header {
+        padding: 20px 10px;
+    }
+}
+
+@media (max-width: 480px) {
+    .main-header {
+        padding: 20px 10px;
+    }
+    .main img {
+        width: 50px;
+        height: 50px;
+    }
+    .main h1 {
+        font-size: 25px;
+    }
+}

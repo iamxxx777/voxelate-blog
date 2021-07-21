@@ -1,0 +1,33 @@
+.all-post {
+    width: 100%;
+    padding: 20px;
+    padding-top: 40px;
+}
+
+.all-post h1 {
+    font-size: 35px;
+    font-weight: 700;
+    color: #211f41;
+}
+
+.all-post h5 {
+    color: #1c234e;
+}
+
+.all-post-container {
+    display: flex;
+    flex-direction: column;
+    margin-top: 25px;
+}
+
+@media (max-width: 480px) {
+    .all-post {
+        padding: 10px;
+        padding-top: 20px;
+    }
+    .all-post h1 {
+        font-size: 28px;
+        font-weight: 700;
+        color: #211f41;
+    }
+}
