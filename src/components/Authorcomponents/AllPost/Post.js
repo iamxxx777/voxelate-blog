@@ -1,9 +1,13 @@
 import "./Post.css";
-import { useEffect } from 'react';
+import { useEffect, useState } from 'react';
 import { useSelector, useDispatch } from "react-redux";
 import { Link, useRouteMatch } from "react-router-dom";
 
+// Post Actions
 import { deletePost as removePost } from "../../../redux/actions/postActions";
+
+// Modal component
+import Postmodal from "../Postmodal/Postmodal";
 
 const Post = ({ data }) => {
 
@@ -21,6 +25,8 @@ const Post = ({ data }) => {
     var total_date = month + ' ' + date + ', ' + year;
     var total_time = hour + ':' + min + ':' + sec ;
 
+    const [postModal, setPostModal] = useState(false);
+
     let dispatch = useDispatch();
     const { deletepost, loading } = useSelector((state) => state.deletedpost);
 
@@ -37,28 +43,32 @@ const Post = ({ data }) => {
     }, [deletepost.success]);
 
     return (
-        <div className='author-post'>
-            <div className="post-title">
-                <h2>{data.title}</h2>
+        <div className="author-article">
+            <div className='author-post'>
+                <div className="post-title">
+                    <h2>{data.title}</h2>
+                </div>
+                <div className="post-date">
+                    <h5>{total_date}</h5>
+                    <h5 className="time">{total_time}</h5>
+                </div>
+                <div className="post-buttons">
+                    <Link to={{
+                        pathname: `${url}/editpost`,
+                        state: {id: data._id}
+                        }} className="edit"
+                    ><i className="fa fa-pencil-square-o" aria-hidden="true"></i></Link>
+                    <button className="delete" onClick={() => setPostModal(true)} style={
+                        loading ? {
+                            pointerEvents: "none",
+                            backgroundColor: "lightgray"
+                        } : {}
+                    }><i className="fa fa-trash" aria-hidden="true"></i></button>
+                </div>
             </div>
-            <div className="post-date">
-                <h5>{total_date}</h5>
-                <h5 className="time">{total_time}</h5>
-            </div>
-            <div className="post-buttons">
-                <Link to={{
-                    pathname: `${url}/editpost`,
-                    state: {id: data._id}
-                    }} className="edit"
-                ><i className="fa fa-pencil-square-o" aria-hidden="true"></i></Link>
-                <button className="delete" onClick={remove} style={
-                    loading ? {
-                        pointerEvents: "none",
-                        backgroundColor: "lightgray"
-                    } : {}
-                }><i className="fa fa-trash" aria-hidden="true"></i></button>
-            </div>
+            <Postmodal postModal={postModal} click={() => setPostModal(false)} removePost={remove} />
         </div>
+        
     )
 }
 

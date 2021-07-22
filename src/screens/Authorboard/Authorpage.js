@@ -7,6 +7,7 @@ import { useSelector } from 'react-redux';
 // Components
 import Sidebar from "./Sidebar";
 import Sidetop from "./Sidetop";
+import Accmodal from "./Accmodal";
 import AllPost from "../../components/Authorcomponents/AllPost/AllPost";
 import NewPost from "../../components/Authorcomponents/NewPost/Newpost";
 import EditAuthor from "../../components//Authorcomponents/EditAuthor/EditAuthor";
@@ -19,11 +20,13 @@ const Authorpage = () => {
     let { path, url } = useRouteMatch();
 
     const [sidebar, setSideBar] = useState(false);
+    const [modal, setModal] = useState(false);
 
     return (
         <div className="authorpage">
-            <Sidebar url={url} author={user} show={sidebar} />
+            <Sidebar url={url} author={user} show={sidebar} toggle={() => setSideBar(false)}  click={() => setModal(true)}/>
             <Sidetop author={user} click={() => setSideBar(!sidebar)} />
+            <Accmodal author={user} modal={modal} click={() => setModal(false)} />
 
             <div className="author-container">
                 <Switch>

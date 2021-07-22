@@ -1,0 +1,98 @@
+.modal-buttons {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+}
+  
+.cancelbtn, .deletebtn {
+    width: 150px;
+    height: 50px;
+    border: none;
+    outline: none;
+    color: #fff;
+    display: inline-block;
+    cursor: pointer;
+    font-family: inherit;
+    font-size: 17px;
+    font-weight: 600;
+    border-radius: 4px;
+}
+
+.cancelbtn {
+    background-color: #ccc;
+    color: black;
+}
+  
+.deletebtn {
+    background-color: #f44336;
+}
+
+.modal-container {
+    padding: 16px;
+    text-align: center;
+}
+
+.modal-container p {
+    margin-bottom: 20px;
+}
+  
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 101;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%; 
+    overflow: auto;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(122, 128, 139, 0.5);
+    padding: 15px 10px;
+}
+
+.show-modal {
+    display: flex;
+}
+  
+.modal-content {
+    background-color: #fff;
+    max-width: 500px;
+    padding: 50px;
+    width: 100%;
+    box-shadow: 0 1px 3px #888;
+    position: relative;
+}
+
+.close {
+    position: absolute;
+    right: 20px;
+    top: 10px;
+    font-size: 25px;
+    font-weight: bold;
+    color: #0f132b;
+}
+  
+.close:hover,
+.close:focus {
+    color: #f44336;
+    cursor: pointer;
+  }
+  
+@media (max-width: 480px) {
+    .modal-content {
+        padding: 50px 25px;
+    }
+    .cancelbtn, .deletebtn {
+        width: 100px;
+        height: 40px;
+        font-size: 16px;
+    }
+}
+  
+@media (max-width: 320px) {
+    .modal-buttons {
+        flex-direction: column;
+    }
+}

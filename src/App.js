@@ -42,7 +42,7 @@ const App = () => {
           <Route path={"/allposts"}> <Postsscreen click={() => setSideToggle(true)} /> </Route>
           <Route path={`/article/:id`}> <Articlescreen click={() => setSideToggle(true)} /> </Route>
           <Route path={"/author"}>{user.username ? <Authorpage /> : <Redirect to="/login" /> } </Route>
-          <Route path={"/register"}> <Register click={() => setSideToggle(true)} /> </Route>
+          <Route path={"/register"}> {!user.username ? <Register click={() => setSideToggle(true)} /> : <Redirect to="/author" /> } </Route>
           <Route path={"/login"}> <Login click={() => setSideToggle(true)} /> </Route>
           <Route path="/404"> <Notfound click={() => setSideToggle(true)} /> </Route>
           <Redirect from="*" to="/404" />

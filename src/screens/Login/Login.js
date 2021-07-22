@@ -38,7 +38,7 @@ const Login = ({ click }) => {
 
             
         } catch (error) {
-            alert(error);
+            alert("server error, please try again");
         }
     }
 
