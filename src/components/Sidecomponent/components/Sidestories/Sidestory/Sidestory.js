@@ -1,6 +1,8 @@
 import Moment from 'react-moment';
 import { Link } from 'react-router-dom';
 
+import "../Sidestories.css"
+
 const Sidestory = ({ story }) => {
     return (
         <Link to={`/article/${story._id}`}>

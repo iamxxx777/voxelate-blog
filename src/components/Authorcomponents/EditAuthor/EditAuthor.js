@@ -57,8 +57,6 @@ const EditAuthor = () => {
             console.error(error);
         }
 
-
-
         // dispatch(putAuthor(data));
 
     }

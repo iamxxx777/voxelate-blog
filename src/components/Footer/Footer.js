@@ -1,5 +1,4 @@
 import './Footer.css';
-import { useEffect } from 'react';
 import { useSelector } from 'react-redux';
 import { Link } from 'react-router-dom';
 
@@ -12,10 +11,6 @@ const Footer = () => {
     } 
 
     const { posts } = useSelector((state) => state.posts);
-
-    useEffect(() => {
-        window.scrollTo(0, 0);
-    }, []);
 
     return (
         <footer>
@@ -47,35 +42,35 @@ const Footer = () => {
 
                     <ul>
                         <li>
-                            <Link to="404ttps://www.facebook.com/profile.php?id=100007522123406" rel="noreferrer" target="_blank" title="Facebook page">
+                            <Link to="https://www.facebook.com/profile.php?id=100007522123406" rel="noreferrer" target="_blank" title="Facebook page">
                                 <i className="fa fa-facebook" aria-hidden="true"></i>
                                 <span>Facebook</span>
                             </Link> 
                         </li>
 
                         <li>
-                            <Link to="404ttps://www.instagram.com/swaggeralmighty/" target="_blank" rel="noreferrer" title="Instagram page">
+                            <Link to="https://www.instagram.com/swaggeralmighty/" target="_blank" rel="noreferrer" title="Instagram page">
                                 <i className="fa fa-instagram" aria-hidden="true"></i>
                                 <span>Instagram</span>
                             </Link>            
                         </li>
 
                         <li>
-                            <Link to="404ttps://twitter.com/dayo_hope?s=09" target="_blank" rel="noreferrer" title="Twitter account">
+                            <Link to="https://twitter.com/dayo_hope?s=09" target="_blank" rel="noreferrer" title="Twitter account">
                                 <i className="fa fa-twitter" aria-hidden="true"></i>
                                 <span>Twitter</span>
                             </Link>            
                         </li>
 
                         <li>
-                            <Link to="404ttps://t.me/iamxxx777" target="_blank" rel="noreferrer" title="Telegram page">
+                            <Link to="https://t.me/iamxxx777" target="_blank" rel="noreferrer" title="Telegram page">
                                 <i className="fa fa-telegram" aria-hidden="true"></i>
                                 <span>Telegram</span>
                             </Link>    
                         </li>
 
                         <li>
-                            <Link to="404ttps://www.twitter.com/dayo_hope" target="_blank" rel="noreferrer">
+                            <Link to="https://www.twitter.com/dayo_hope" target="_blank" rel="noreferrer">
                                 <i className="fa fa-youtube" aria-hidden="true"></i>
                                 <span>Youtube</span>
                             </Link>    

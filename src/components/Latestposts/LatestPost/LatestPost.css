@@ -52,9 +52,9 @@
 }
 
 .article-title h3 {
-    font-size: 17px;
-    font-weight: 600;
-    line-height: 1.4;
+    font-size: 1.1rem;
+    font-weight: 500;
+    line-height: 1.45;
 }
 
 .article-info {
@@ -120,13 +120,13 @@
 
 @media (max-width: 530px) {
     .article-img {
-        height: 350px;
+        height: 300px;
     }
 }
 
 @media (max-width: 400px) {
     .article-img {
-        height: 300px;
+        height: 280px;
     }
     .article-info .author img {
         height: 30px;

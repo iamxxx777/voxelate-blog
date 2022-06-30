@@ -1,19 +1,20 @@
 .latest {
     display: grid;
     grid-template-columns: 2fr 1fr;
-    gap: 20px;
-    padding: 15px 0;
+    gap: 1.35rem;
+    padding: 1rem 0;
+    margin-bottom: 3rem;
 }
 
 .latest-posts h1,
 .side-components h1 {
     width: 100%;
     text-align: left;
-    padding: 15px 5px;
+    padding: 1rem 0.35rem;
     font-size: 30px;
     text-transform: capitalize;
-    font-weight: 700;
-    margin-bottom: 15px;
+    font-weight: 600;
+    margin-bottom: 1rem;
     position: relative;
 }
 
@@ -41,7 +42,7 @@
 
 @media (max-width: 1150px) {
     .latest {
-        padding: 15px;
+        padding: 1rem;
     }
 }
 
@@ -54,6 +55,6 @@
 
 @media (max-width: 530px) {
     .latest {
-        padding: 15px 8px;
+        padding: 1rem 0.5rem;
     }
 }

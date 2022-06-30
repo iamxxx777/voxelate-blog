@@ -11,7 +11,7 @@ const Newsflash = () => {
 
     let indexEl = useRef(0)
 
-    var first, title;
+    let first, title;
     if (posts.length > 1) {
         first = posts[0];
         title = first.title;

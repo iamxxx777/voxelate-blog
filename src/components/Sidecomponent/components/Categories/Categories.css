@@ -1,11 +1,12 @@
 
 .categories {
-    margin-top: 30px;
+    margin-top: 2rem;
 }
 
-.categories h1 {
+.categories h2 {
     font-size: 25px;
-    margin-bottom: 20px;
+    font-weight: 600;
+    margin-bottom: 1.4rem;
 }
 
 .categories-container {
@@ -41,8 +42,8 @@
 }
 
 .category-title h3 {
-    font-weight: 600;
-    font-size: 16px;
+    font-weight: 500;
+    font-size: 0.93rem;
     text-transform: uppercase;
 }
 

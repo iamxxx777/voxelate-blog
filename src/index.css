@@ -11,8 +11,8 @@ html {
 body {
   background-color: #ecf0f1;
   color: #232325;
-  font-family: 'Rubik', sans-serif;
-  font-size: 15px;
+  font-family: 'Rubik', 'Poppins', 'Roboto', sans-serif;
+  font-size: 16px;
   font-weight: 400;
   line-height: 1.4;
   font-style: normal;

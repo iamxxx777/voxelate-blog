@@ -9,7 +9,7 @@ const Sidestories = ({ stories }) => {
 
     return (
         <div className="side-stories card">
-            <h1>Top Stories</h1>
+            <h2>Top Stories</h2>
             <div className="stories">
                 {sliced ? sliced.map((story) => <Sidestory key={story._id} story={story} />) : null}
             </div>

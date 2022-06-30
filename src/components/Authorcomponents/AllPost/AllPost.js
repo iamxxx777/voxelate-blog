@@ -2,6 +2,8 @@ import { useSelector, useDispatch } from 'react-redux';
 import { useEffect } from 'react';
 import { getAuthorPosts } from "../../../redux/actions/authorActions";
 
+import Loading from "../../Loader/Loading";
+import ErrorItem from "../../Loader/ErrorItem";
 import Post from "./Post";
 import './AllPost.css';
 
@@ -19,6 +21,14 @@ const AllPost = () => {
             dispatch(getAuthorPosts(user.username));
         }
     }, [dispatch, user]);
+
+    if (loading) {
+      return <Loading />;
+    }
+
+    if (error) {
+      return <ErrorItem error={error} />;
+    }
 
 
     return (

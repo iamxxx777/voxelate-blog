@@ -7,6 +7,8 @@ import { getPostDetails } from "../../redux/actions/postActions";
 import './Articlescreen.css';
 
 // Components
+import Loading from "../../components/Loader/Loading";
+import ErrorItem from "../../components/Loader/ErrorItem";
 import Header from '../../components/Header/Header';
 import Navbar from '../../components/Navbar/Navbar';
 import Footer from '../../components/Footer/Footer';
@@ -26,9 +28,13 @@ const Articlescreen = ({ click }) => {
         dispatch(getPostDetails(id));
     }, [dispatch, id]);
 
-    useEffect(() => {
-        window.scrollTo(0, 0);
-    }, [post]);
+    if (loading) {
+      return <Loading />;
+    }
+
+    if (error) {
+      return <ErrorItem error={error} />;
+    }
 
     return (
         <div>
@@ -36,20 +42,12 @@ const Articlescreen = ({ click }) => {
             <Navbar toggle={click} />
             <Newsflash />
             <section className="single-post container">
-                {loading ? (<h2>Loading...</h2>) 
-                    : error ? (<h2>Loading...</h2>)
-                    : (
-                        <>
-                            <Articlepage article={post} />
-                            <Sidecomponent stories={posts} />
-                        </>
-                    )    
-                }
-                
+                <Articlepage article={post} />
+                <Sidecomponent stories={posts} />
             </section>
             <Footer />
         </div>
-    )
+    );
 }
 
 export default Articlescreen;

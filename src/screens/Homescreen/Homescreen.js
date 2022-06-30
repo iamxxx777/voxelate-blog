@@ -1,6 +1,12 @@
 import { useEffect } from "react";
-// Components
+import { useDispatch, useSelector } from "react-redux";
 
+import { getPosts } from "../../redux/actions/postActions";
+
+
+// Components
+import Loading from "../../components/Loader/Loading";
+import ErrorItem from "../../components/Loader/ErrorItem";
 import Header from "../../components/Header/Header";
 import Navbar from "../../components/Navbar/Navbar";
 import Newsflash from "../../components/NewsFlash/Newsflash";
@@ -13,18 +19,31 @@ import './Homescreen.css';
 
 const Homescreen = ({ click }) => {
 
+    const { loading, posts, error } = useSelector((state) => state.posts);
+
+    let dispatch = useDispatch();
+
     useEffect(() => {
-        window.scrollTo(0, 0);
-    }, []);
+      dispatch(getPosts());
+    }, [dispatch]);
+
+    if(loading) {
+        return <Loading />
+    }
+
+    if(error) {
+        return <ErrorItem error={error} />
+    }
+
 
     return (
         <div>
             <Header  />
             <Navbar toggle={click} />
-            <Newsflash />
-            <Topnews />
-            <Latest />
-            <PostsByCategory />
+            <Newsflash post={posts[0]} />
+            <Topnews posts={posts} />
+            <Latest posts={posts} />
+            <PostsByCategory posts={posts} />
             <Footer />
         </div>
     )

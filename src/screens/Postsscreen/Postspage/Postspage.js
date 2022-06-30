@@ -7,6 +7,8 @@ import { useSelector, useDispatch } from "react-redux";
 import { getPosts } from "../../../redux/actions/postActions";
 
 //Components
+import Loading from "../../../components/Loader/Loading";
+import ErrorItem from "../../../components/Loader/ErrorItem";
 import LatestPost from "../../../components/Latestposts/LatestPost/LatestPost";
 import Sidecomponent from "../../../components/Sidecomponent/Sidecomponent";
 import Pagination from "../Pagination/Pagination";
@@ -33,33 +35,34 @@ const Postspage = () => {
         dispatch(getPosts());
     }, [dispatch]);
 
-    useEffect(() => {
-        window.scrollTo(0, 0);
-    }, [currentPage]);
+    if (loading) {
+        return <Loading />
+    }
+
+    if (error) {
+        return <ErrorItem error={error} />;
+    }
+
 
     return (
-        <div className='all-posts container'>
-            {loading ? (<h3>Loading...</h3>)
-                : error ? (<h3>{error}</h3>) 
-                : (
-                    <>
-                        <div className="all-posts-container card">
-                            <h2>All Posts</h2>
+        <div className="all-posts container">
+            <div className="all-posts-container card">
+                <h2>All Posts</h2>
 
-                            <div className="all-posts-div">
-                                {displayedProducts.map((post) => <LatestPost key={post._id} post={post} />)}
-                            </div>
-                            <Pagination length={postsLength} posts={articlesPerPage} pagination={paginate} />
-                        </div>
-                        <Sidecomponent stories={posts} />
-
-                    </>
-                )
-            }
-
-            
+                <div className="all-posts-div">
+                    {displayedProducts.map((post) => (
+                        <LatestPost key={post._id} post={post} />
+                    ))}
+                </div>
+                <Pagination
+                    length={postsLength}
+                    posts={articlesPerPage}
+                    pagination={paginate}
+                />
+            </div>
+            <Sidecomponent stories={posts} />
         </div>
-    )
+    );
 }
 
 export default Postspage;

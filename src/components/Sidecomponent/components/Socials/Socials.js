@@ -2,7 +2,7 @@
 const Socials = () => {
     return (
         <div className="socials card">
-            <h1>Follow us</h1>
+            <h2>Follow us</h2>
             <div className="social-icon facebook">
                 <i className="fa fa-facebook-square" aria-hidden="true"></i>
                 <span>3287 Followers</span>

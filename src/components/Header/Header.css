@@ -1,6 +1,6 @@
 .main-header {
     width: 100%;
-    padding: 30px 10px;
+    padding: 1rem 0.75rem;
     background-color: #fff;
 }
 
@@ -36,7 +36,7 @@
 
 @media (max-width: 480px) {
     .main-header {
-        padding: 20px 10px;
+        padding: 1rem 10px;
     }
     .main img {
         width: 50px;

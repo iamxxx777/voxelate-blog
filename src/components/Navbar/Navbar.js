@@ -1,38 +1,38 @@
-import { useEffect, useState } from 'react';
+import { useState } from 'react';
 import { Link } from 'react-router-dom';
 
 import './Navbar.css';
 
 const Navbar = ({ toggle }) => {
 
-    const [fixed, setFixed] = useState(false);
+    // const [fixed, setFixed] = useState(false);
     const [drop, setDrop] = useState(false);
 
-    const sticky = () => {
-        if(document.body.clientWidth > 601) {
-            if(window.scrollY > 124) {
-                setFixed(true);
-            } else {
-                setFixed(false);
-            }
-        } else {
-            if(window.scrollY > 84) {
-                setFixed(true);
-            } else {
-                setFixed(false);
-            }
-        }
-    }
+    // const sticky = () => {
+    //     if(document.body.clientWidth > 601) {
+    //         if(window.scrollY > 124) {
+    //             setFixed(true);
+    //         } else {
+    //             setFixed(false);
+    //         }
+    //     } else {
+    //         if(window.scrollY > 84) {
+    //             setFixed(true);
+    //         } else {
+    //             setFixed(false);
+    //         }
+    //     }
+    // }
 
-    useEffect(() => {
-        window.addEventListener("scroll", sticky);
-        return () => {
-            window.removeEventListener('scroll', sticky);
-        }
-    }, []);
+    // useEffect(() => {
+    //     window.addEventListener("scroll", sticky);
+    //     return () => {
+    //         window.removeEventListener('scroll', sticky);
+    //     }
+    // }, []);
 
     return (
-        <header className={`head ${fixed && "fixed"}`} >
+        <header className="head" >
             <div className="header container">
                 <nav className="header-nav">
                     <li><Link to="/" className="nav-link">Home</Link></li>
