@@ -13,7 +13,7 @@
 
 .post-image {
     width: 100%;
-    height: 350px;
+    height: 400px;
     position: relative;
 }
 
@@ -40,7 +40,8 @@
     display: flex;
     justify-content: flex-start;
     color: #31333f;
-    margin-top: 10px;
+    gap: 1.25rem;
+    margin-top: 1rem;
     margin-bottom: 20px;
 }
 
@@ -59,7 +60,7 @@
 
 .post-author-img span {
     font-size: 14px;
-    font-weight: 400;
+    font-weight: 600;
     margin-left: 8px;
 }
 
@@ -86,8 +87,9 @@
 }
 
 .post-info p {
-    margin-bottom: 20px;
-    font-size: 15px;
+    margin-bottom: 1.25rem;
+    font-size: 1.05rem;
+    line-height: 1.6;
 }
 
 .post-info img {
@@ -270,17 +272,23 @@
 }
 
 @media (max-width: 480px) {
+    .post-image {
+        height: 350px;
+    }
     .single-post-div {
         padding: 20px 10px;
     }
     .post-info {
         padding: 5px 10px;
     }
+    .post .post-author {
+        margin-top: 0.75rem;
+    }
     .post-header {
         padding: 5px 10px;
     }
     .post-header h2 {
-        font-size: 22px;
+        font-size: 24px;
         font-weight: 600;
         margin-top: 5px;
     }
