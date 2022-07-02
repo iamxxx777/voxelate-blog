@@ -1,76 +1,49 @@
-<<<<<<< HEAD
-# Getting Started with Create React App
+<h1 align="center">Voxelate Blog</h1>
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-## Available Scripts
+<div align="center">
+  <h3>
+    <a href="https://voxelate.netlify.app">
+      Live Site
+    </a>
+  </h3>
+</div>
 
-In the project directory, you can run:
+<!-- TABLE OF CONTENTS -->
 
-### `npm start`
+## Table of Contents
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+- [Overview](#overview)
+- [Built With](#built-with)
+- [Contact](#contact)
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+<!-- OVERVIEW -->
 
-### `npm test`
+## Overview
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+![screenshot](https://res.cloudinary.com/iamxxx777/image/upload/v1656721368/voxelate_pts0x5.png)
 
-### `npm run build`
+NOTE: Only the Front-end Code is hosted on this repo
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+Voxelate is a modern Blog application that features top news about lifestyle, travel, technology, sports and music. Voxelate is built with a react frontend and an express backend. The state functionality of the frontend is handled with React-Redux and the application is styled with plain CSS. 
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+The backend is built on an express server on Node.js runtime. A MongoDb Atlas handles all the database needs for the application.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
 
-### `npm run eject`
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+<!-- This section should list any major frameworks that you built your project using. Here are a few examples.-->
+## Built with
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+- [React](https://reactjs.org/)
+- [MongoDB](https://mongodb.com/)
+- [Express](https://expressjs.com/)
+- [Redux](https://redux.js.org/)
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
 
-## Learn More
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+## Contact
 
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
-=======
-# voxelate-blog
-A MERN stack blog app
->>>>>>> 741a13f044eb88067755859b25b3630ff4aa83a7
-"# voxelate-blog" 
+- Website [hopetomiwa.com](https://hopetomiwa.com)
+- GitHub [@iamxxx777](https://github.com/iamxxx777)
+- Twitter [@dayo_hope](https://twitter.com/dayo_hope)
